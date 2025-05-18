@@ -10,32 +10,15 @@ import favoriteRoutes from "./routes/favoriteRoute";
 dotenv.config();
 
 const app = express();
-const allowedOrigins = [
-    "http://localhost:5173",
-    "https://country-enthusiast-frontend.onrender.com",
-];
 
 // Middleware
-app.use(
-    cors({
-        origin: function (origin, callback) {
-            // Allow requests with no origin (like Postman)
-            if (!origin) return callback(null, true);
-            if (allowedOrigins.includes(origin)) {
-                return callback(null, true);
-            } else {
-                return callback(new Error("Not allowed by CORS"));
-            }
-        },
-        credentials: true,
-    })
-);
+app.use(cors());
 app.use(morgan("dev"));
 app.use(express.json());
 
 // Routes
 app.use("/api/auth", authRoutes);
-app.use("/api/favorites", favoriteRoutes);
+app.use("/api/favorites", favoriteRoutes); 
 
 export default app;
 
