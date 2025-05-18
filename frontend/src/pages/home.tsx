@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { getAllCountries } from "../services/countryServices";
 import { Country } from "../types/country";
-import { Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import { getFavorites, addFavorite, removeFavorite } from "../services/favoriteService";
 import CountryCard from "../components/card";
@@ -16,7 +15,7 @@ const Home = () => {
     const { isAuthenticated } = useAuth();
     const [favorites, setFavorites] = useState<string[]>([]);
     
-    const [isFavorite, setIsFavorite] = useState(false);
+    const [] = useState(false);
 
     useEffect(() => {
         const fetchCountries = async () => {
