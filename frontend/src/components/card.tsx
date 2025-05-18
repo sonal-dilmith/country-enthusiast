@@ -1,9 +1,8 @@
 import { Country } from "../types/country";
 import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
 import { HeartIcon as OutlineHeartIcon } from "@heroicons/react/24/outline";
 import { HeartIcon as SolidHeartIcon } from "@heroicons/react/24/solid";
-import { useAuth } from "../context/AuthContext";
+
 
 interface Props {
     country: Country;
