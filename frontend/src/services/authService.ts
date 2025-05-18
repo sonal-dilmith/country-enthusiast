@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_BASE = "http://localhost:5000/api/auth"; 
+const API_BASE = "https://country-enthusiast-backend.onrender.com/api/auth"; 
 
 export const registerUser = async (userData: { username: string; email: string; password: string }) => {
     try {

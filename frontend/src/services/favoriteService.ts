@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const getFavorites = async (): Promise<string[]> => {
-    const res = await axios.get("http://localhost:5000/api/favorites", {
+    const res = await axios.get("https://country-enthusiast-backend.onrender.com/api/favorites", {
         headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -11,7 +11,7 @@ export const getFavorites = async (): Promise<string[]> => {
 
 export const addFavorite = async (countryCode: string): Promise<void> => {
     await axios.post(
-        "http://localhost:5000/api/favorites",
+        "https://country-enthusiast-backend.onrender.com/api/favorites",
         { countryCode },
         {
             headers: {
@@ -22,7 +22,7 @@ export const addFavorite = async (countryCode: string): Promise<void> => {
 };
 
 export const removeFavorite = async (countryCode: string): Promise<void> => {
-    await axios.delete(`http://localhost:5000/api/favorites`, {
+    await axios.delete(`https://country-enthusiast-backend.onrender.com/api/favorites`, {
         headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
