@@ -32,7 +32,7 @@ const CountryCard = ({ country, onToggleFavorite, isAuthenticated, isFavorite }:
                 {isAuthenticated && (
                     <button
                         onClick={handleFavoriteClick}
-                        className="absolute top-2 right-2 p-1 rounded-full bg-white shadow-md hover:bg-gray-100 transition"
+                        className=" top-2 right-2 p-1 rounded-full bg-white shadow-md hover:bg-gray-100 transition"
                     >
                         {isFavorite ? (
                             <SolidHeartIcon className="w-6 h-6 text-red-500" />
